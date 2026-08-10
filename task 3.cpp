@@ -1,26 +1,14 @@
 #include<iostream>
 using namespace std;
-struct PetrolPump {
-    char name[20];
-    float pricePerLiter;
-    int availableLiters;
-};
-void input(PetrolPump *p) {
-    cout << "Enter Pump Name: ";
-    cin >> p->name;
-    cout << "Enter Price per Liter: ";
-    cin >> p->pricePerLiter;
-    cout << "Enter Available Liters: ";
-    cin >> p->availableLiters;
+int main()
+{
+ int arr[5]={1,2,3,4,5};
+int *ptr=arr;
+for(int i=0;i<5;i++)
+{
+    cout<< *(arr+i)<<*ptr;
+    cout<<"value:"<< ptr<<endl;
+    ptr++;
 }
-void display(PetrolPump *p) {
-    cout << "Pump Name: " << p->name << endl;
-    cout << "Price: " << p->pricePerLiter << endl;
-    cout << "Stock: " << p->availableLiters << " liters" << endl;
-}
-int main() {
-    PetrolPump p;
-    input(&p);
-    display(&p);
     return 0;
 }
